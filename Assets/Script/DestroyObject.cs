@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class DestroyObject : MonoBehaviour
 {
-    public GameObject effectPrefab;
-    public GameObject effectPrefab2;
+    //public GameObject effectPrefab;
+    //public GameObject effectPrefab2;
     public int objectHP;
 
     // このメソッドはコライダー同士がぶつかった瞬間に呼び出される
@@ -23,18 +23,18 @@ public class DestroyObject : MonoBehaviour
                 // このスクリプトがついているオブジェクトを破壊する
                 Destroy(other.gameObject);
 
-                GameObject effect = Instantiate(effectPrefab, other.transform.position, Quaternion.identity);
+                //GameObject effect = Instantiate(effectPrefab, other.transform.position, Quaternion.identity);
 
-                Destroy(effect, 2.0f);
+                //Destroy(effect, 2.0f);
             }
             else    // そうでない場合（HPが0以下になった場合）には（条件）
             {
                 Destroy(other.gameObject);
 
                 // もう１種類のエフェクトを発生させる
-                GameObject effect2 = Instantiate(effectPrefab2, other.transform.position, Quaternion.identity);
+                //GameObject effect2 = Instantiate(effectPrefab2, other.transform.position, Quaternion.identity);
 
-                Destroy(effect2, 2.0f);
+                //Destroy(effect2, 2.0f);
                 Destroy(this.gameObject);
             }
         }
