@@ -1,12 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class HorseHealth : MonoBehaviour
 {
     //public GameObject effectPrefab;
     //public GameObject effectPrefab2;
     public int horseHP;
+
+    public TextMeshProUGUI hpLabel;
+
+    private void Start()
+    {
+        hpLabel.text = "" + horseHP;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,6 +24,8 @@ public class HorseHealth : MonoBehaviour
         {
             // HPを１ずつ減少させる
             horseHP -= 1;
+
+            hpLabel.text = "" + horseHP;
 
             // ぶつかってきた相手方（敵の砲弾）を破壊する
             Destroy(other.gameObject);
