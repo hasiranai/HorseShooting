@@ -12,8 +12,12 @@ public class HorseHealth : MonoBehaviour
 
     public TextMeshProUGUI hpLabel;
 
+    private int horseMaxHP = 10;   // 最大値は自由
+
     private void Start()
     {
+        horseHP = horseMaxHP;
+
         hpLabel.text = "" + horseHP;
     }
 
@@ -44,5 +48,19 @@ public class HorseHealth : MonoBehaviour
                 Destroy(gameObject);
             }
         }
+    }
+
+
+
+    public void AddHP(int amount)
+    {
+        horseHP += amount;
+
+        if (horseHP > horseMaxHP)
+        {
+            horseHP = horseMaxHP;
+        }
+
+        hpLabel.text = "" + horseHP;
     }
 }
