@@ -45,12 +45,22 @@ public class HorseHealth : MonoBehaviour
                 //Destroy(effect2, 1.0f);
 
                 // プレーヤーを破壊する
-                Destroy(gameObject);
+                ///Destroy(gameObject);
+
+                // プレイヤーを破壊せずにオフモードにする（ポイント・テクニック）
+                // プレイヤーを破壊すると、その時点でメモリー上から消えるので、それ以降のコードが実行されなくなる
+                this.gameObject.SetActive(false);
+
+                // 1.5秒後に「GoToGameOver()」メソッドを実行する
+                Invoke("GoToGameOver", 1.5f);
             }
         }
     }
 
-
+    void GoToGameOver()
+    {
+        SceneManager.LoadScene("GameOver");
+    }
 
     public void AddHP(int amount)
     {

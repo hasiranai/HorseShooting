@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(Rigidbody))]
 public class HorseMovement : MonoBehaviour
@@ -36,5 +37,13 @@ public class HorseMovement : MonoBehaviour
         float turn = turnInputValue * turnSpeed * Time.deltaTime;
         Quaternion turnRptation = Quaternion.Euler(0, turn, 0);
         rb.MoveRotation(rb.rotation * turnRptation);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Goal"))
+        {
+            SceneManager.LoadScene("GameClear");
+        }
     }
 }
