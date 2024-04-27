@@ -26,6 +26,7 @@ public class HorseHealth : MonoBehaviour
         // もしもぶつかってきた相手のTagが"EnemyShell"であったならば（条件）
         if (other.CompareTag("EnemyShell"))
         {
+            Debug.Log(other.name);
             // HPを１ずつ減少させる
             horseHP -= 1;
 
