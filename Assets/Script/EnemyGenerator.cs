@@ -10,12 +10,6 @@ public class EnemyGenerator : MonoBehaviour
     private float timer;
     private int GenerateCount;
     
-    void Start()
-    {
-        
-    }
-
-    
     void Update()
     {
         if (GenerateCount >= maxCount)
@@ -39,8 +33,11 @@ public class EnemyGenerator : MonoBehaviour
         // ランダムな配列を決める
         int ramdomIndex = Random.Range(0, EnemyPlefabs.Length);
 
+        // ランダムな位置を決める
+        Vector3 randomPosition = new Vector3(Random.Range(-10f, 10f), 10f, Random.Range(-10f, 10f));
+
         // 敵を生成
-        Instantiate(EnemyPlefabs[ramdomIndex], transform.position, Quaternion.identity);
+        Instantiate(EnemyPlefabs[ramdomIndex], randomPosition, Quaternion.identity);
 
         GenerateCount++;
     }
