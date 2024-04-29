@@ -22,7 +22,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 410661020, guid: 5f392814e5dcb6a45b0380e07be63338, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 410661020, guid: 5f392814e5dcb6a45b0380e07be63338, type: 3}
       propertyPath: m_LocalScale.x
@@ -103,3 +103,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectHP: 3
+  itemPrefab: {fileID: 2969830229812737837, guid: 7315b8b86acc04101a73785efeb65072, type: 3}

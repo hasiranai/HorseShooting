@@ -879,7 +879,7 @@ Transform:
   - {fileID: 4418085424172223058}
   - {fileID: 4002425732605585359}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6729442334090574813
 MonoBehaviour:
@@ -906,6 +906,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectHP: 3
+  itemPrefab: {fileID: 2969830229812737837, guid: 7315b8b86acc04101a73785efeb65072, type: 3}
 --- !u!65 &9059574433493980693
 BoxCollider:
   m_ObjectHideFlags: 0

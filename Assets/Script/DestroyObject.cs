@@ -7,6 +7,7 @@ public class DestroyObject : MonoBehaviour
     //public GameObject effectPrefab;
     //public GameObject effectPrefab2;
     public int objectHP;
+    public GameObject itemPrefab;
 
     // このメソッドはコライダー同士がぶつかった瞬間に呼び出される
     private void OnTriggerEnter(Collider other)
@@ -36,6 +37,10 @@ public class DestroyObject : MonoBehaviour
 
                 //Destroy(effect2, 2.0f);
                 Destroy(this.gameObject);
+
+                // （ポイント）pos.y + 0.6fのコードでアイテムの出現場所の「高さ」を調整しています
+                Vector3 pos = transform.position;
+                Instantiate(itemPrefab, new Vector3(pos.x, pos.y + 0.6f, pos.z), Quaternion.identity);
             }
         }
     }
