@@ -34,7 +34,7 @@ public class EnemyGenerator : MonoBehaviour
         int ramdomIndex = Random.Range(0, EnemyPlefabs.Length);
 
         // ランダムな位置を決める
-        Vector3 randomPosition = new Vector3(Random.Range(-10f, 10f), 10f, Random.Range(-10f, 10f));
+        Vector3 randomPosition = new Vector3(Random.Range(-10f, 10f), 20f, Random.Range(-10f, 10f));
 
         // 敵を生成
         Instantiate(EnemyPlefabs[ramdomIndex], randomPosition, Quaternion.identity);

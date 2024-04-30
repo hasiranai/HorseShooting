@@ -856,6 +856,7 @@ GameObject:
   - component: {fileID: 6729442334090574813}
   - component: {fileID: 2855159749964359456}
   - component: {fileID: 9059574433493980693}
+  - component: {fileID: -1121077594816291722}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -928,6 +929,33 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.1086395, y: 3.2379704, z: 5.3021183}
   m_Center: {x: 0.05431971, y: 1.1189852, z: -1.2167611}
+--- !u!54 &-1121077594816291722
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 695135102333449534}
+  serializedVersion: 4
+  m_Mass: 50
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &723828075187817965
 GameObject:
   m_ObjectHideFlags: 0
