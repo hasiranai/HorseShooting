@@ -9,6 +9,14 @@ public class DestroyObject : MonoBehaviour
     public int objectHP;
     public GameObject itemPrefab;
 
+    public int scoreValue;  // 得点数を自由に設定する
+    private ScoreManager sm;
+
+    private void Start()
+    {
+        sm = GameObject.Find("ScoreLabel").GetComponent<ScoreManager>();
+    }
+
     // このメソッドはコライダー同士がぶつかった瞬間に呼び出される
     private void OnTriggerEnter(Collider other)
     {
@@ -37,6 +45,8 @@ public class DestroyObject : MonoBehaviour
 
                 //Destroy(effect2, 2.0f);
                 Destroy(this.gameObject);
+
+                sm.AddScore(scoreValue);
 
                 // （ポイント）pos.y + 0.6fのコードでアイテムの出現場所の「高さ」を調整しています
                 Vector3 pos = transform.position;
