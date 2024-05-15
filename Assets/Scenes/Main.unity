@@ -997,7 +997,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 50
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -1475,6 +1475,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2528461024272320307, guid: 670313f9303aa4aed8bdfb8a1b46d5da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4453603370538523040, guid: 670313f9303aa4aed8bdfb8a1b46d5da, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -1483,9 +1487,17 @@ PrefabInstance:
       propertyPath: m_EnableTreeColliders
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4956077687797525779, guid: 670313f9303aa4aed8bdfb8a1b46d5da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5012449814912317499, guid: 670313f9303aa4aed8bdfb8a1b46d5da, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6598179615457833439, guid: 670313f9303aa4aed8bdfb8a1b46d5da, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7469298776067217717, guid: 670313f9303aa4aed8bdfb8a1b46d5da, type: 3}
       propertyPath: m_Name
@@ -1677,7 +1689,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
+  far clip plane: 100
   field of view: 60
   orthographic: 0
   orthographic size: 5
